@@ -24,6 +24,9 @@
 h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+html {
+  font-size: 62.5%;
+}
 
 html,
 body {
@@ -55,6 +58,7 @@ section h2 {
   flex-direction: column;
   background-color: rgb(232, 227, 207);
   padding: 1.6rem 1.6rem 0 1.6rem;
+  overflow: scroll;
 }
 /* 
 .main-content {
@@ -62,11 +66,16 @@ section h2 {
   margin: 0 auto 0 auto;
 } */
 
+.product-info__description {
+  line-height: 2rem;
+}
+
 .product-team__list {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
+  padding-left: 0px;
 }
 
 .product-team__list.mobile {
@@ -93,7 +102,7 @@ section h2 {
 .product-team__list__card.mobile {
   display: flex;
   justify-content: flex-start;
-  padding: 0.8rem;
+  /* padding: 0.8rem; */
   background-color: var(--powder-blue);
   overflow-x: sc;
   flex-direction: initial;
@@ -137,4 +146,37 @@ section h2 {
 }
 
 .repository__link {
+}
+
+@media (max-width: 72.5rem) {
+  #wrapper {
+    width: 90vw;
+    border-left: 2vw solid var(--secondary-color-tint);
+    border-right: 2vw solid var(--secondary-color-tint);
+  }
+}
+
+@media (max-width: 59.375rem) {
+  #wrapper {
+    width: 100%;
+    border-left: 1vw solid var(--secondary-color-tint);
+    border-right: 1vw solid var(--secondary-color-tint);
+  }
+
+  .product-team__list {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .product-team__list__card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: initial;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
 }
